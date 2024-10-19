@@ -78,7 +78,7 @@ foreach ($language_files as $language_file) {
 
 // Calculation through GET parameters
 
-$xmr_in = isset($_GET["in"]) ? strtoupper(htmlspecialchars($_GET["in"])) : 'EUR';
+$xmr_in = isset($_GET["in"]) ? strtoupper(htmlspecialchars($_GET["in"])) : 'USD';
 $xmr_amount = isset($_GET["xmr"]) ? floatval($_GET["xmr"]) : 1;
 $fiat_amount = isset($_GET["fiat"]) ? floatval($_GET["fiat"]) : '';
 $conversion_direction = isset($_GET["direction"]) ? intval($_GET["direction"]) : 0;
