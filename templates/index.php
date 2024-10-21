@@ -47,11 +47,11 @@
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-    <meta name="application-name" content="Moner.ooo" />
+    <meta name="application-name" content="Revuo Calc" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="img/favicon-196x196.png" />
     <meta name="theme-color" content="#193e4c" />
-    <meta name="apple-mobile-web-app-title" content="Moner.ooo" />
+    <meta name="apple-mobile-web-app-title" content="Revuo Calc" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#193e4c" />
 
     <link href="css/main.css" rel="stylesheet" />
