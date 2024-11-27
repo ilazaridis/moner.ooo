@@ -29,9 +29,11 @@ module.exports = {
     }),
     new PurgeCSSPlugin({
       paths: glob.sync([
-        path.join(__dirname, 'index.php')
+        path.join(__dirname, 'index.php'),
+        path.join(__dirname, 'src/js/*.js'),
+        path.join(__dirname, 'templates/*.php'),
       ]),
-      safelist: ['tooltip', 'fade', 'show', 'bs-tooltip-top', 'tooltip-inner', 'tooltip-arrow', 'btn-equals', 'btn-arrow', 'alert', 'alert-warning']
+      safelist: ['tooltip', 'fade', 'show', 'bs-tooltip-top', 'tooltip-inner', 'tooltip-arrow', 'btn-equals', 'btn-arrow', 'alert', 'alert-warning', 'donation-qr', 'donation-qr-toggle', 'donation-qr-container']
     })
   ]
 };

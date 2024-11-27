@@ -20,13 +20,14 @@ $api_cg = json_decode(file_get_contents('coingecko.json'), true);
 // Configuration file
 $config = [];
 if (file_exists('config.php')) {
-    $config = require 'config.php';
+    $config = require_once 'config.php';
 }
 
 $display_servers_guru = isset($config['servers_guru']) && $config['servers_guru'] === true;
 $attribution = isset($config['attribution']) ? $config['attribution'] : '';
 $preferred_currencies = isset($config['preferred_currencies']) ? $config['preferred_currencies'] : [];
-$github_url = isset($config['github_url']) ? $config['github_url'] : 'https://git.private.coffee/kumi/moner.ooo/';
+$github_url = isset($config['github_url']) ? $config['github_url'] : 'https://github.com/rottenwheel/moner.ooo/';
+$footer_html = isset($config['footer_html']) ? $config['footer_html'] : '';
 
 // Extract the keys
 $currencies = array_map('strtoupper', array_keys($api_cg));
@@ -77,7 +78,7 @@ foreach ($language_files as $language_file) {
 
 // Calculation through GET parameters
 
-$xmr_in = isset($_GET["in"]) ? strtoupper(htmlspecialchars($_GET["in"])) : 'EUR';
+$xmr_in = isset($_GET["in"]) ? strtoupper(htmlspecialchars($_GET["in"])) : 'USD';
 $xmr_amount = isset($_GET["xmr"]) ? floatval($_GET["xmr"]) : 1;
 $fiat_amount = isset($_GET["fiat"]) ? floatval($_GET["fiat"]) : '';
 $conversion_direction = isset($_GET["direction"]) ? intval($_GET["direction"]) : 0;
@@ -105,5 +106,5 @@ foreach (array_reverse($preferred_currencies) as $currency) {
 }
 
 // Output the HTML
-require 'templates/index.php';
+require_once 'templates/index.php';
 ?>
