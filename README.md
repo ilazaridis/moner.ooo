@@ -1,8 +1,8 @@
-![Favicon - moner.ooo](/img/apple-touch-icon-152x152.png)
+![Favicon - moner.ooo](/img/favicon-152x152.png)
 
-# Moner.ooo
+# Revuo Monero Calc
 
-Moner.ooo is a web application for converting Monero (XMR) to various fiat currencies and vice versa. It provides almost real-time exchange rates and supports multiple languages based on the user's browser settings.
+Revuo Monero Calc is a web application for converting Monero (XMR) to various fiat currencies and vice versa. It provides almost real-time exchange rates and supports multiple languages based on the user's browser settings.
 
 This is a fork of the original project by [nice42q](https://github.com/nice42q/moner.ooo) with some modifications, including:
 
@@ -163,3 +163,7 @@ We welcome contributions! Here’s how you can help:
 
 - [Bootstrap](https://getbootstrap.com/)
 - [CoinGecko API](https://www.coingecko.com/en/api)
+
+## License
+
+Revuo Monero Calc is released under GNU General Public License v3.0. See [LICENSE](./LICENSE) for more information.
