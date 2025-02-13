@@ -11,6 +11,13 @@ function fetchJson($filename) {
     return json_decode(file_get_contents($filename), true);
 }
 
+function fetchCache(string $key, string $url)
+{
+    return apcu_entry($key, function() use ($url) {
+        return makeApiRequest($url);
+    }, 60);
+}
+
 // Make an API request and return the JSON response
 function makeApiRequest($url) {
     $ch = curl_init($url);
@@ -72,7 +79,7 @@ function fetchAvailableCurrencies() {
 // Fetch currency data from CoinGecko API
 function fetchCurrencyData($currencies) {
     $apiUrl = getCoinGeckoApiUrl('simple/price', ['ids' => 'monero', 'vs_currencies' => implode(',', array_map('strtolower', $currencies))]);
-    return makeApiRequest($apiUrl);
+    return fetchCache('currency_data', $apiUrl);
 }
 
 $currencyFile = 'coingecko.json';
